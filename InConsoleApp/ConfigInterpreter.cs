@@ -12,7 +12,6 @@ namespace InConsoleApp
         {
             this.config = config;
             this.Settings = this.config.GetSection("secrets").Get<Settings>();
-            DescribeSettings();
         }
         public void DescribeSettings()
         {

@@ -13,8 +13,6 @@ namespace InConsoleApp
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             SetUp();
             Log.Information($"Started: {DateTime.Now.ToShortTimeString()}");
 
@@ -22,7 +20,6 @@ namespace InConsoleApp
             {
                 var ci = _servicesProvider.GetService<ConfigInterpreter>();
                 ci.DescribeSettings();
-
 
                 Log.Debug("Disposing ...");
                 DisposeServices();
@@ -34,7 +31,7 @@ namespace InConsoleApp
             }
             finally
             {
-                Log.CloseAndFlush();
+                //Log.CloseAndFlush();
 
                 Log.Debug("Disposing ...");
                 DisposeServices();
